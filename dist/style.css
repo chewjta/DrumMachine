@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+* {
+  font-family: 'Pacifico';
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+}
+
+#display {
+  width: 200px;
+  background-color: burlywood;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.controlPanel {
+  display: block;
+  padding-top: 90px;
+  padding-left: 10px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.control {
+  width: 100px;
+}
+.control p {
+  margin-bottom: 0;
+}
+
+.outer-select, .control .select {
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  background-color: black;
+}
+
+.inner-select, .control .select .inner {
+  width: 23px;
+  height: 20px;
+  background-color: burlywood;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+.drum-pad {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  background-color: burlywood;
+}
+.drum-pad:hover {
+  cursor: pointer;
+}
+
+.pad-bank {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 60px);
+  grid-template-rows: repeat(auto-fit, 60px);
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  grid-gap: 20px;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 30px;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  border: 4px solid blanchedalmond;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
+#powerbutton {
+  color: #252525;
+  text-shadow: 0px 1px 1px rgba(250, 250, 250, 0.1);
+  font-size: 12pt;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  background-color: #53575d;
+  box-shadow: 0px 2px 0px 0px #222222, 0px 7px 10px 0px #111111, inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2), inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+  /* 4th Shadow */
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+#powerbutton:hover {
+  cursor: pointer;
+}
+#powerbutton:active {
+  box-shadow: 0px 0px 0px 0px #222222, 0px 3px 7px 0px #111111, inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2), inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
+  /* 4th Shadow */
+  background-color: #53575d;
+  top: 3px;
+}
+
+#powerbutton {
+  transition: color 350ms, text-shadow 350ms;
+  -o-transition: color 350ms, text-shadow 350ms;
+  -moz-transition: color 350ms, text-shadow 350ms;
+  -webkit-transition: color 350ms, text-shadow 350ms;
+}
+
+#powerandvolume {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  margin-bottom: -8px;
+  margin-left: -33px;
+}
+
+[type=range] {
+  -webkit-appearance: none;
+  margin: 12.5px 0;
+  width: 100%;
+}
+[type=range]:focus {
+  outline: none;
+}
+[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 2px 2px 2px #222, 0 0 2px #2f2f2f;
+  background: burlywood;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 0 solid #fff;
+  height: 25px;
+  width: 8px;
+  border-radius: 0;
+  background: peru;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+  opacity: 0.7;
+}
+[type=range]::-webkit-slider-thumb:hover {
+  opacity: 1;
+}
+[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e4c49b;
+}
+[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 2px 2px 2px #222, 0 0 2px #2f2f2f;
+  background: burlywood;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 0 solid #fff;
+  height: 25px;
+  width: 8px;
+  border-radius: 0;
+  background: peru;
+  cursor: pointer;
+}
+[type=range]::-moz-range-thumb:hover {
+  opacity: 1;
+}
+[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+[type=range]::-ms-fill-lower {
+  box-shadow: 2px 2px 2px #222, 0 0 2px #2f2f2f;
+  background: #d9ac73;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+[type=range]::-ms-fill-upper {
+  box-shadow: 2px 2px 2px #222, 0 0 2px #2f2f2f;
+  background: burlywood;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 0 solid #fff;
+  height: 25px;
+  width: 8px;
+  border-radius: 0;
+  background: peru;
+  cursor: pointer;
+}
+[type=range]::-ms-thumb:hover {
+  opacity: 1;
+}
+[type=range]:focus::-ms-fill-lower {
+  background: burlywood;
+}
+[type=range]:focus::-ms-fill-upper {
+  background: #e4c49b;
+}
+
+#creator {
+  float: right;
+  word-wrap: normal;
+  width: 75px;
+}
+
+@media screen and (max-width: 650px) {
+  .inner-container {
+    transform: scale(0.7);
+  }
+}
